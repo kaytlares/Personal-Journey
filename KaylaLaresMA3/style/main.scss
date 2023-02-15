@@ -1,0 +1,131 @@
+@import "variable";
+@import "mixin";
+@import "normalize.css";
+
+/*Setting up media queries */
+
+/*desktop*/
+@media screen and (min-width:1281px) {
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+    }
+}
+
+/* phone */
+    @media screen and (max-width: 500px)  {
+        .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        }
+
+    }
+/* tablets */
+      @media screen and (max-width: 768px) {
+        /*grid 2 col*/
+        .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        }
+    }
+
+/* Setting up grid layout for content */
+
+ /* Header */
+    .top{ 
+        grid-column: 1 / span 3 ;
+        grid-row: 2;
+    }
+
+/* Origin Piece*/
+    .hs{ 
+        grid-column: 2 / span 4;
+        grid-row: 3;
+
+    }
+
+/* Seminole Piece */
+    .sc{ 
+        grid-column: 3 / span 5;
+        grid-row: 4;
+    }
+
+/* UCF Piece*/
+    .college{ 
+        grid-column:  4 / span 6;
+        grid-row: 5;
+    }
+
+/* Footer Piece */
+
+    .foot{ 
+        grid-column: 1 / span 10;
+        grid-row: 6;
+
+    }
+
+/* Customizing the box */   
+    .card {
+        box-sizing: content-box;
+        border: 4px solid whitesmoke;
+        padding: 10px;
+        background-color: $myCardColor;
+        background-clip: $myCardSettings;
+    }
+
+/*background color */
+    body{ 
+        background: $myBodyBackground;
+        font-family: $myBodyFont;
+    }
+
+/*Designing the header background */
+    h1{
+        @include body-color($main-color: #f4f0ec)
+    }
+
+/*This is for the second header font, about high school */
+    .high{ 
+        color: $myHighFont;
+    }
+    
+/*This is for the third header font about seminole */   
+    .comm{ 
+        color: $myCFont;
+
+    }
+
+/*Designing all the paragraphs */
+    p{ 
+        font-family: $myPtext;
+        font-size: $myPsize;
+    }
+
+/* Designing the main header */
+    header{
+        @include tb;
+    }
+
+/* The links on the top header */
+    a:link {
+        color: $myLinkColor;
+    }
+
+ /* Visited links on the top header */
+      a:visited {
+        color:  $myVisitColor;
+    }
+      
+/* Mouse over link on the top header */
+      a:hover {
+        color: $myHoverColor;
+      }
+
+/* Desinging the bottom footer*/
+    .foot{
+        @include tb;
+    }
+

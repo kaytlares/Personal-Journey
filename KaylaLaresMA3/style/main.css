@@ -1,0 +1,107 @@
+/*Variables created for the main page. */
+/*This mixin is to design the header and footer only */
+/*This is a conditional, that gives add the background for the headers */
+@import url(normalize.css);
+/*Setting up media queries */
+/*desktop*/
+@media screen and (min-width: 1281px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px; } }
+/* phone */
+@media screen and (max-width: 500px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px; } }
+/* tablets */
+@media screen and (max-width: 768px) {
+  /*grid 2 col*/
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px; } }
+/* Setting up grid layout for content */
+/* Header */
+.top {
+  grid-column: 1/span 3;
+  grid-row: 2; }
+
+/* Origin Piece*/
+.hs {
+  grid-column: 2 / span 4;
+  grid-row: 3; }
+
+/* Seminole Piece */
+.sc {
+  grid-column: 3 / span 5;
+  grid-row: 4; }
+
+/* UCF Piece*/
+.college {
+  grid-column: 4 / span 6;
+  grid-row: 5; }
+
+/* Footer Piece */
+.foot {
+  grid-column: 1 / span 10;
+  grid-row: 6; }
+
+/* Customizing the box */
+.card {
+  box-sizing: content-box;
+  border: 4px solid whitesmoke;
+  padding: 10px;
+  background-color: #feca1d;
+  background-clip: border-box; }
+
+/*background color */
+body {
+  background: url(../img/deskcolor.png);
+  font-family: "Graduate", cursive; }
+
+/*Designing the header background */
+h1 {
+  background-color: #f4f0ec; }
+
+/*This is for the second header font, about high school */
+.high {
+  color: #800080; }
+
+/*This is for the third header font about seminole */
+.comm {
+  color: #003087; }
+
+/*Designing all the paragraphs */
+p {
+  font-family: Sans-serif;
+  font-size: 18px; }
+
+/* Designing the main header */
+header {
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 20px;
+  color: #aa3d01;
+  text-align: center; }
+
+/* The links on the top header */
+a:link {
+  color: black; }
+
+/* Visited links on the top header */
+a:visited {
+  color: #aa3d01; }
+
+/* Mouse over link on the top header */
+a:hover {
+  color: white; }
+
+/* Desinging the bottom footer*/
+.foot {
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 20px;
+  color: #aa3d01;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

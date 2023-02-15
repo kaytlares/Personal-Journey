@@ -1,0 +1,15 @@
+/*This mixin is to design the header and footer only */   
+@mixin tb {
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 20px;
+  color: #aa3d01;
+  text-align: center;
+
+}
+/*This is a conditional, that gives add the background for the headers */   
+@mixin body-color($main-color: #f4f0ec) {
+  @if $main-color {
+    background-color: $main-color;
+  }
+}
+      
